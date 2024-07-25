@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""
+Initialization of Flask app
+"""
 from flask import Flask
 
 app = Flask(__name__)
