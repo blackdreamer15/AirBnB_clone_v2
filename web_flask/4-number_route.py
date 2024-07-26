@@ -31,5 +31,11 @@ def python_is_cool(text="is_cool"):
     """Returns "Python" followed by the value of the text variable"""
     return f"Python {text.replace('_', ' ')}"
 
+
+@app.route("/number/<int:n>", strict_slashes=False)
+def is_n_a_number(n):
+    """Returns "n is a number" only if n is an integer"""
+    return f"{n:d} is a number"
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
